@@ -32,10 +32,10 @@ void tampilJadwal(Kereta* arr, int n) {
     cout << "===============================================================================\n";
     for (int i = 0; i < n; i++) {
         cout << "| " << left << setw(10) << arr[i].noKereta
-             << " | " << left << setw(17) << arr[i].nama
-             << " | " << left << setw(15) << arr[i].asal
-             << " | " << left << setw(15) << arr[i].tujuan
-             << " | Rp " << left << setw(7) << arr[i].harga << "|\n";
+            << " | " << left << setw(17) << arr[i].nama
+            << " | " << left << setw(15) << arr[i].asal
+            << " | " << left << setw(15) << arr[i].tujuan
+            << " | Rp " << left << setw(7) << arr[i].harga << "|\n";
     }
     cout << "===============================================================================\n";
 }
@@ -65,7 +65,7 @@ void linearSearchRute(Kereta* arr, int n, string asal, string tujuan) {
     for (int i = 0; i < n; i++) {
         if (arr[i].asal == asal && arr[i].tujuan == tujuan) {
             cout << "- No: " << arr[i].noKereta << " | " << arr[i].nama
-                 << " | Rp " << arr[i].harga << "\n";
+                << " | Rp " << arr[i].harga << "\n";
             found = true;
         }
     }
@@ -110,9 +110,9 @@ Kereta* jumpSearchNoKereta(Kereta* arr, int n, int cariNo, bool silent = false) 
         if (!silent) {
             cout << "\n[Kereta Ditemukan!]\n";
             cout << "No. Kereta : " << arr[prev].noKereta << "\n"
-                 << "Nama       : " << arr[prev].nama << "\n"
-                 << "Rute       : " << arr[prev].asal << " -> " << arr[prev].tujuan << "\n"
-                 << "Harga      : Rp " << arr[prev].harga << "\n";
+                << "Nama       : " << arr[prev].nama << "\n"
+                << "Rute       : " << arr[prev].asal << " -> " << arr[prev].tujuan << "\n"
+                << "Harga      : Rp " << arr[prev].harga << "\n";
         }
         return &arr[prev];
     } else {
@@ -208,7 +208,7 @@ void peekStack(Transaksi stack[], int top) {
         cout << "Stack is empty\n";
     } else {
         cout << "- Riwayat Teratas : " << stack[top].namaPenumpang 
-             << " (KA " << stack[top].kereta.nama << ")\n";
+            << " (KA " << stack[top].kereta.nama << ")\n";
     }
 }
 
@@ -220,7 +220,7 @@ void displayStack(Transaksi stack[], int top) {
     cout << "\n--- Riwayat Transaksi (Top to Bottom) ---\n";
     for (int i = top; i >= 0; i--) {
         cout << top - i + 1 << ". " << stack[i].namaPenumpang 
-             << " | " << stack[i].kereta.asal << " -> " << stack[i].kereta.tujuan << "\n";
+            << " | " << stack[i].kereta.asal << " -> " << stack[i].kereta.tujuan << "\n";
     }
 }
 
@@ -284,7 +284,7 @@ void displayQueue(Transaksi queue[], int front, int rear) {
     cout << "\nQueue elements: \n";
     for (int i = front; i <= rear; i++) {
         cout << i - front + 1 << ". Penumpang: " << queue[i].namaPenumpang 
-             << " | Tujuan: " << queue[i].kereta.tujuan << "\n";
+            << " | Tujuan: " << queue[i].kereta.tujuan << "\n";
     }
 }
 
